@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:skill_swipe/component/bottom_nav_bar.dart';
 import 'package:skill_swipe/component/free_learning.dart';
 import 'package:skill_swipe/component/main_drawer.dart';
+import 'package:skill_swipe/pages/connect_page.dart';
+import 'package:skill_swipe/pages/explore_page.dart';
+import 'package:skill_swipe/pages/profile_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,23 +35,6 @@ class HomePage extends StatelessWidget {
         ],
       ),
       drawer: MainDrawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.brown[200],
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.white),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star, color: Colors.white),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark, color: Colors.white),
-            label: '',
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skill_swipe/pages/control_page.dart';
 import 'package:skill_swipe/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -50,7 +51,7 @@ class IntroPage extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => ControlPage()),
                   ),
                   child: Container(
                     decoration: BoxDecoration(
