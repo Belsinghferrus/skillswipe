@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:skill_swipe/component/free_learning.dart';
+import 'package:skill_swipe/component/main_drawer.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.brown[200],
-        leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.white),
-          onPressed: () {},
+        title: const Text(
+          "Skill Swipe",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        elevation: 0,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
           IconButton(
             icon: Icon(Icons.search, color: Colors.white),
@@ -23,6 +25,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.brown[200],
         items: [
@@ -62,7 +65,7 @@ class HomePage extends StatelessWidget {
   Widget _buildSwapLearnGrowSection() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.yellow[100],
+        color: Colors.yellow[600],
         borderRadius: BorderRadius.circular(10),
       ),
       padding: EdgeInsets.all(16),

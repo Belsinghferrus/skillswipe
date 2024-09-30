@@ -30,66 +30,69 @@ class FreeLearning extends StatelessWidget {
 }
 
 Widget _buildCourseCard() {
-  return Container(
-    width: 160,
-    margin: EdgeInsets.only(right: 10),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withOpacity(0.2),
-          blurRadius: 5,
-          offset: Offset(0, 3),
-        ),
-      ],
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Flexible(
-          child: Container(
-            height: 100,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://fulcrum.rocks/blog/wp-content/uploads/2022/04/image-2UdemyApp.jpg'), // Replace with actual image URL
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10),
-                topRight: Radius.circular(10),
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 3),
+    child: Container(
+      width: 160,
+      margin: const EdgeInsets.only(right: 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 5,
+            offset: Offset(2, 6),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Flexible(
+            child: Container(
+              height: 100,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                      'https://images.ui8.net/uploads/card_1619936015040.png'), // Replace with actual image URL
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
               ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "UX Designer in 3 Months",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "21,390 students",
-                style: TextStyle(color: Colors.grey),
-              ),
-              Row(
-                children: [
-                  Text("10h 26m"),
-                  Spacer(),
-                  IconButton(
-                    icon: Icon(Icons.bookmark_border),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "UX Designer in 3 Months",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "21,390 students",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Row(
+                  children: [
+                    Text("10h 26m"),
+                    Spacer(),
+                    IconButton(
+                      icon: Icon(Icons.bookmark_border),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }

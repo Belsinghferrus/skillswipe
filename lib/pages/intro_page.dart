@@ -8,7 +8,7 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 255, 219, 59),
+        backgroundColor: Theme.of(context).colorScheme.primary,
         body: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Center(
