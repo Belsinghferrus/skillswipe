@@ -52,10 +52,10 @@ Widget _buildCourseCard() {
           Flexible(
             child: Container(
               height: 100,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                      'https://images.ui8.net/uploads/card_1619936015040.png'), // Replace with actual image URL
+                      'https://awik.io/wp-content/uploads/2018/06/unsplash.jpg'), // Replace with actual image URL
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.only(

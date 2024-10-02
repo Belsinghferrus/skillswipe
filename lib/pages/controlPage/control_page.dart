@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:skill_swipe/component/bottom_nav_bar.dart';
-import 'package:skill_swipe/pages/connect_page.dart';
-import 'package:skill_swipe/pages/explore_page.dart';
-import 'package:skill_swipe/pages/home_page.dart';
-import 'package:skill_swipe/pages/profile_page.dart';
+import 'package:skill_swipe/pages/mainPages/connect_page.dart';
+import 'package:skill_swipe/pages/mainPages/explore_page.dart';
+import 'package:skill_swipe/pages/mainPages/home_page.dart';
+import 'package:skill_swipe/pages/mainPages/profile_page.dart';
 
 class ControlPage extends StatefulWidget {
   const ControlPage({super.key});
@@ -13,7 +13,8 @@ class ControlPage extends StatefulWidget {
 }
 
 class _ControlPageState extends State<ControlPage> {
-  /*
+
+/*
 ------------B O T T O M - N A V - B A R------------------------
 */
 
@@ -37,14 +38,15 @@ class _ControlPageState extends State<ControlPage> {
     ProfilePage(),
   ];
 
-  /*
-------------B O T T O M - N A V - B A R------------------------
+/*
+------------B O T T O M - N A V - B A R - E N D ------------------------
 */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: _pages[_selectedIndex],
+      
       bottomNavigationBar:
           MainBottonNavBar(onTabChange: (index) => navigateBottomBar(index)),
     );

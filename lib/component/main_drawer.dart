@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skill_swipe/pages/drawerPage/community/community_page.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -30,7 +31,7 @@ class MainDrawer extends StatelessWidget {
 
               DrawerListTile(
                 icon: Icons.person,
-                text: "My Account",
+                text: "Personal Details",
                 onTap: () {},
               ),
 
@@ -38,7 +39,14 @@ class MainDrawer extends StatelessWidget {
               DrawerListTile(
                 icon: Icons.forum,
                 text: "Community",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CommunityPage(),
+                    ),
+                  );
+                },
               ),
 
               //premium

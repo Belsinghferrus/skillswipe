@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skill_swipe/pages/intro_page.dart';
+import 'package:skill_swipe/pages/introPages/intro_page.dart';
 import 'package:skill_swipe/theme/theme.dart';
 
 void main() {

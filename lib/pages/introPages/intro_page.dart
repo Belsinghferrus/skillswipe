@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skill_swipe/pages/control_page.dart';
-import 'package:skill_swipe/pages/home_page.dart';
+import 'package:skill_swipe/pages/controlPage/control_page.dart';
 
 class IntroPage extends StatelessWidget {
   IntroPage({super.key});

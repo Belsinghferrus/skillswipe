@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:skill_swipe/component/bottom_nav_bar.dart';
 import 'package:skill_swipe/component/free_learning.dart';
 import 'package:skill_swipe/component/main_drawer.dart';
-import 'package:skill_swipe/pages/connect_page.dart';
-import 'package:skill_swipe/pages/explore_page.dart';
-import 'package:skill_swipe/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,16 +21,16 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
           IconButton(
-            icon: Icon(Icons.search, color: Colors.white),
+            icon: const Icon(Icons.search, color: Colors.white),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.person, color: Colors.white),
+            icon: const Icon(Icons.person, color: Colors.white),
             onPressed: () {},
           ),
         ],
       ),
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -75,7 +71,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Row(
             children: [
-              Text(
+              const Text(
                 "Discover the most accomplished \n and influential professionals",
                 style: TextStyle(fontSize: 14),
               ),
